@@ -10,9 +10,52 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    title: "", //电影名
+    author_name: '', //导演名字
+    casts_name:'',//演员表
+    author:[],
+    average: '', //评分
+    year: '', //年份
+    collect_count: '', //看过
+    wish_count: '', //想看
+    ratings_count: '', //评价人数
+    summary: '', //简介
+    casts: [], //导演/演员
+    genres: [], //标签
   },
-
+  // 格式数据
+  formData(data) {
+    let {
+      title,
+      author,
+      rating,
+      wish_count,
+      year,
+      collect_count,
+      ratings_count,
+      summary,
+      attrs,
+      genres
+    } = data
+    let name = author.map(v=>{
+      return v.name
+    })
+    console.log(attrs)
+    let casts_name = attrs.cast.join('/')
+    this.setData({
+      title,
+      author_name:name.join("/"),
+      casts_name: casts_name,
+      average: rating.average,
+      wish_count,
+      author,
+      year,
+      collect_count,
+      ratings_count,
+      summary,
+      genres
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -21,7 +64,7 @@ Page({
     subject({
       id
     }).then(res => {
-
+      this.formData(res)
     })
   },
 

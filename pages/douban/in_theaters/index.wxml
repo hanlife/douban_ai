@@ -5,7 +5,7 @@
   </view>
   <view class='in_list'>
 
-    <view class='in_item' wx:for="{{list}}">
+    <view class='in_item' wx:for="{{list}}" wx:key="{{item.index}}">
       <view class='in_item_img' bindtap="godetail" data-id="{{item.id}}">
         <image src="{{item.img}}" mode='widthFix'></image>
       </view>

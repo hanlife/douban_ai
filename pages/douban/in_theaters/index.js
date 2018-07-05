@@ -105,6 +105,8 @@ Page({
         list,
         totle: res.total
       })
+      // 
+      wx.stopPullDownRefresh();
     })
   },
 

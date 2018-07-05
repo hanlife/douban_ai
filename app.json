@@ -1,11 +1,12 @@
 {
   "pages": [
+    "pages/douban/subject/index",
     "pages/douban/in_theaters/index",
     "pages/index/index",
-    "pages/douban/subject/index",
     "pages/douban/top250/index",
     "pages/life/index",
-    "pages/douban/search/index"
+    "pages/douban/search/index",
+    "pages/douban/lists/index"
   ],
   "tabBar": {
     "color": "#666",

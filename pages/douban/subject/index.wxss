@@ -1,1 +1,128 @@
 /* pages/douban/subject/index.wxss */
+.subject{
+  background-color: #fff;
+}
+.sub_header{
+  padding: 30rpx 20rpx;
+  background-color: #ccc;
+  font-size: 32rpx;
+  color: #fff;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+}
+
+.sub_img{
+  flex: 1;
+  font-size: 0;
+  text-align: center;
+}
+
+.sub_img>image{
+  width: 300rpx;
+}
+
+.sub_info{
+  flex: 1;
+}
+
+.sub_title{
+  font-size: 40rpx;
+}
+.sub_info_item{
+  margin-bottom: 15rpx;
+}
+
+.sub_tab{
+  display: flex;
+  display: -webkit-flex;
+  flex-direction:row;
+  padding: 30rpx 0;
+  border-bottom: 1rpx solid #ddd;
+}
+
+.sub_tab_flex{
+  flex: 1;
+  text-align: center;
+  font: 32rpx;
+  color: #666;
+  line-height: 40rpx;
+}
+
+.sub_tab_flex:nth-child(2){
+  border-left: 1rpx solid #ddd;
+  border-right: 1rpx solid #ddd;
+}
+
+.sub_des{
+  margin: 30rpx 20rpx 0;
+  overflow: hidden;
+}
+
+.sub_des_title{
+  font-size: 38rpx;
+  font-weight: bold;
+  color: #000;
+  line-height: 58rpx;
+  position: relative;
+  padding-left: 30rpx;
+  margin-bottom: 15rpx;
+  text-indent: 2;
+}
+.sub_des_title::before{
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 10rpx;
+  background-color: green;
+}
+
+.sub_des_con{
+  font-size: 30rpx;
+  color: #666;
+  line-height: 40rpx;
+  margin-bottom: 30rpx;
+}
+
+.sub_des_scrol{
+  margin-bottom: 30rpx;
+}
+
+.sub_des_actor_warrper{
+  display: flex;
+  white-space: nowrap;
+}
+.sub_actor_item{
+  width: 300rpx;
+  display: inline-block;
+  text-align: center;
+  font-size: 30rpx;
+  color: #666;
+}
+.sub_actor_item>image{
+  height: 340rpx;
+}
+.sub_des_con{
+  padding: 5rpx 0 35rpx;
+}
+.sub_des_con> text{
+font-size: 32rpx;
+color: #666;
+margin-right: 15rpx;
+padding: 0 15rpx;
+position: relative;
+}
+
+.sub_des_con> text::after{
+  content: "";
+  position: absolute;
+  top: -5rpx;
+  left: 0;
+  bottom: -5rpx;
+  right: 0;
+  border: 1rpx solid #ccc;
+  border-radius: 10rpx;
+}
