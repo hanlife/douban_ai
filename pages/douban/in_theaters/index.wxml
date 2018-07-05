@@ -1,0 +1,20 @@
+<!--pages/douban/in_theaters/index.wxml-->
+<view class='in_theaters-box'>
+  <view class='in_header' bindtap='Search'>
+    <view>输入关键字搜索</view>
+  </view>
+  <view class='in_list'>
+
+    <view class='in_item' wx:for="{{list}}">
+      <view class='in_item_img' bindtap="godetail" data-id="{{item.id}}">
+        <image src="{{item.img}}" mode='widthFix'></image>
+      </view>
+      <view class='in_item_des'>
+        <text>{{item.title}}</text>
+        <text class='in_item_average'>{{item.average}}分</text>
+      </view>
+    </view>
+    <view class='load_more'>{{list.length
+      < totle? "加载更多...": "已加载全部"}}</view>
+    </view>
+  </view>

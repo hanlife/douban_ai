@@ -1,0 +1,66 @@
+/* pages/douban/in_theaters/index.wxss */
+page{
+  background-color: #ccc;
+  }
+in_theaters-box {
+  overflow: hidden;
+}
+
+.in_header {
+  background-color: #ccc;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 750rpx;
+  text-align: center;
+}
+
+.in_header> view {
+  margin: 15rpx 20rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  background-color: #fff;
+  font-size: 28rpx;
+  color: #999;
+}
+
+.in_list{
+  padding-top: 95rpx;
+  margin: 0 15rpx;
+  overflow: hidden;
+}
+.in_item{
+  display: inline-block;
+  vertical-align: middle;
+  width: 350rpx;
+  margin-bottom: 10rpx;
+  background-color: #fff;
+  border-radius: 10rpx 10rpx 0 0;
+}
+.in_item:nth-child(2n){
+  margin-left: 20rpx;
+}
+.in_item_img{
+
+}
+.in_item_img>image{
+  border-radius: 10rpx;
+}
+
+.in_item_des{
+  text-align: center;
+  font-size: 24rpx;
+  color: #333;
+}
+
+.in_item_average{
+  color: red;
+  margin-left: 20rpx;
+}
+
+.load_more{
+  text-align: center;
+  font-size: 26rpx;
+  color: #666;
+  margin: 20rpx 0;
+}
