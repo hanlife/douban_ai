@@ -44,7 +44,7 @@
 .sub_tab_flex{
   flex: 1;
   text-align: center;
-  font: 32rpx;
+  font-size: 30rpx;
   color: #666;
   line-height: 40rpx;
 }
@@ -107,22 +107,4 @@
 }
 .sub_des_con{
   padding: 5rpx 0 35rpx;
-}
-.sub_des_con> text{
-font-size: 32rpx;
-color: #666;
-margin-right: 15rpx;
-padding: 0 15rpx;
-position: relative;
-}
-
-.sub_des_con> text::after{
-  content: "";
-  position: absolute;
-  top: -5rpx;
-  left: 0;
-  bottom: -5rpx;
-  right: 0;
-  border: 1rpx solid #ccc;
-  border-radius: 10rpx;
 }

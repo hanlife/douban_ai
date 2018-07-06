@@ -1,2 +1,29 @@
 <!--pages/douban/search/index.wxml-->
-<text>pages/douban/search/index.wxml</text>
+<view class='search'>
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" class='search_btn'>
+    <view class="picker">
+      {{array[index]}}
+    </view>
+  </picker>
+  <input class='search_input' bindinput="bindKeyInput" placeholder="请输入电影名称" value='{{keyword}}'/>
+  <icon type='clear' class='clear' size='20' wx:if="{{keyword!==''}}" bindtap='clear'></icon>
+  <text class='search_btn' bindtap='comfrim'>搜索</text>
+</view>
+<view class='hot_search'>
+  <view class='sub_des_title'>
+    热门搜索
+  </view>
+  <view class='sub_des_con'>
+    <block wx:for="{{hot_list}}" wx:key="{{item.index}}">
+      <text bindtap='seacrh' data-keword='{{item}}' data-type="q">{{item}}</text>
+    </block>
+  </view>
+  <view class='sub_des_title'>
+    热门标签
+  </view>
+  <view class='sub_des_con'>
+    <block wx:for="{{hot_type}}" wx:key="{{item.index}}">
+      <text bindtap='seacrh' data-keword='{{item}}' data-type="tag">{{item}}</text>
+    </block>
+  </view>
+</view>

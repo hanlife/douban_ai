@@ -1,0 +1,23 @@
+<!--pages/douban/actor/index.wxml-->
+<view class='actor_header'>
+  <image src='{{image}}' class='image_bg' mode="widthFix"></image>
+  <view class='actor-detail'>
+    <view class='actor_img'>
+      <image src='{{image}}'></image>
+    </view>
+    <view class='actor_name'><text>{{name}}</text></view>
+    <view class='actor_us_name'>{{name_en}}</view>
+    <view class='actor_pos'>{{born_place}}</view>
+  </view>
+</view>
+<view class='actor_works'>
+  <view class='in_item' wx:for="{{list}}" wx:key="{{item.index}}">
+    <view class='in_item_img' bindtap="godetail" data-id="{{item.id}}">
+      <image src="{{item.img}}"></image>
+    </view>
+    <view class='in_item_des'>
+      <view class='in_item_tit'>{{item.title}}</view>
+      <view class='in_item_tit in_item_roles'>担任：{{item.roles[0]}}</view>
+    </view>
+  </view>
+</view>

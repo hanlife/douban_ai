@@ -2,58 +2,52 @@
 <view class='subject'>
   <view class='sub_header'>
     <view class='sub_img'>
-      <image src='../in_theaters/p2508925590.jpg' mode='aspectFit'></image>
+      <image src='{{images}}' mode='aspectFit'></image>
     </view>
     <view class='sub_info'>
       <view class='sub_info_item sub_title'>{{title}}</view>
-      <view class='sub_info_item'>导演：{{author_name}}</view>
+      <view class='sub_info_item'>导演：{{directors_name}}</view>
       <view class='sub_info_item'>演员：{{casts_name}}</view>
-      <view class='sub_info_item'>豆瓣评分：{{average}}</view>
+      <view class='sub_info_item'>豆瓣评分：{{average}}分</view>
       <view class='sub_info_item'>上映年份：{{year}}年</view>
     </view>
   </view>
   <view class='sub_tab'>
     <view class='sub_tab_flex'>
-      <view>39</view>
+      <view>{{collect_count}}</view>
       <view>看过</view>
     </view>
     <view class='sub_tab_flex'>
-      <view>39</view>
+      <view>{{wish_count}}</view>
       <view>想看</view>
     </view>
     <view class='sub_tab_flex'>
-      <view>39</view>
+      <view>{{ratings_count}}</view>
       <view>评分人数</view>
     </view>
   </view>
   <view class='sub_des'>
     <view class='sub_des_title'>剧情简介</view>
     <view class='sub_des_con'>
-      一位不速之客的意外到访，打破了神油店老板程勇的平凡人生，他从一个交不起房租的男性保健品商贩，一跃成为印度仿制药“格列宁”的独家代理商。收获巨额利润的他，生活剧烈变化，被病患们冠以“药神”的称号。但是，一场关于救赎的拉锯战也在波涛暗涌中慢慢展开......
+      {{summary}}
     </view>
     <view class='sub_des_title'>导演/演员</view>
     <view class='sub_des_scrol'>
       <scroll-view scroll-x="true" class='sub_des_actor_warrper' style='width:100%;'>
-        <view class='sub_actor_item'>
-          <image src='../in_theaters/p2508925590.jpg' mode='aspectFit'></image>
-          <view class='sub_actor_name'>韩燕</view>
-          <view class='sub_actor_job'>导演</view>
-        </view>
-        <view class='sub_actor_item'>
-          <image src='../in_theaters/p2508925590.jpg' mode='aspectFit'></image>
-          <view class='sub_actor_name'>韩燕</view>
-          <view class='sub_actor_job'>导演</view>
-        </view>
-        <view class='sub_actor_item'>
-          <image src='../in_theaters/p2508925590.jpg' mode='aspectFit'></image>
-          <view class='sub_actor_name'>韩燕</view>
-          <view class='sub_actor_job'>导演</view>
-        </view>
-        <view class='sub_actor_item'>
-          <image src='../in_theaters/p2508925590.jpg' mode='aspectFit'></image>
-          <view class='sub_actor_name'>韩燕</view>
-          <view class='sub_actor_job'>导演</view>
-        </view>
+        <block wx:for="{{directors}}" wx:key="{{item.index}}">
+          <view class='sub_actor_item' data-id="{{item.id}}" bindtap='toActor'>
+            <image src='{{item.avatars.small}}' mode='aspectFit'></image>
+            <view class='sub_actor_name'>{{item.name}}</view>
+            <view class='sub_actor_job'>导演</view>
+          </view>
+        </block>
+        <block wx:for="{{casts}}" wx:key="{{item.index}}">
+          <view class='sub_actor_item' data-id="{{item.id}}" bindtap='toActor'>
+            <image src='{{item.avatars.small}}' mode='aspectFit'></image>
+            <view class='sub_actor_name'>{{item.name}}</view>
+            <view class='sub_actor_job'>演员</view>
+          </view>
+        </block>
       </scroll-view>
     </view>
     <view class='sub_des_title'>标签</view>

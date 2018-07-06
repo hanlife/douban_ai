@@ -1,4 +1,5 @@
 /**app.wxss**/
+
 .container {
   height: 100%;
   display: flex;
@@ -7,8 +8,140 @@
   justify-content: space-between;
   padding: 200rpx 0;
   box-sizing: border-box;
-} 
+}
 
-image{
+image {
   width: 100%;
+}
+
+/*列表  */
+
+.in_list {
+  padding-top: 95rpx;
+  margin: 0 15rpx;
+  overflow: hidden;
+}
+
+.in_item {
+  display: inline-block;
+  vertical-align: middle;
+  width: 350rpx;
+  margin-bottom: 10rpx;
+  background-color: #fff;
+  border-radius: 10rpx 10rpx 0 0;
+}
+
+.in_item:nth-child(2n) {
+  margin-left: 20rpx;
+}
+
+.in_item_img {
+  position: relative;
+  font-size: 0;
+}
+
+.in_item_img>image {
+  width: 350rpx;
+  height: 490rpx;
+  border-radius: 10rpx;
+}
+
+.in_item_des {
+  text-align: left;
+  font-size: 26rpx;
+  color: #333;
+  padding-bottom: 10rpx;
+}
+
+.in_item_average {
+  font-size: 24rpx;
+  color: #fff;
+  text-align: right;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40rpx;
+  line-height: 40rpx;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.in_item_tit {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 46rpx;
+  margin-left: 10rpx;
+}
+
+.in_list_type {
+  font-size: 22rpx;
+  margin: 0 10rpx;
+  padding: 5rpx;
+}
+
+.in_list_type> text {
+  position: relative;
+  margin-right: 20rpx;
+}
+
+.in_list_type> text::after {
+  content: "";
+  position: absolute;
+  top: -5rpx;
+  bottom: -5rpx;
+  left: -5rpx;
+  right: -5rpx;
+  border: 1rpx solid #ccc;
+  border-radius: 10rpx;
+}
+
+.load_more {
+  text-align: center;
+  font-size: 26rpx;
+  color: #fff;
+  margin: 20rpx 0;
+}
+
+/*标签  */
+
+.sub_des_title {
+  font-size: 38rpx;
+  font-weight: bold;
+  color: #000;
+  line-height: 58rpx;
+  position: relative;
+  padding-left: 30rpx;
+  margin-bottom: 15rpx;
+  text-indent: 2;
+}
+
+.sub_des_title::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 10rpx;
+  background-color: green;
+}
+
+.sub_des_con> text {
+  font-size: 24rpx;
+  color: #666;
+  margin-right: 15rpx;
+  padding: 0 15rpx;
+  position: relative;
+}
+
+.sub_des_con> text::after {
+  content: "";
+  position: absolute;
+  top: -5rpx;
+  left: 0;
+  bottom: -5rpx;
+  right: 0;
+  border: 1rpx solid #ccc;
+  border-radius: 10rpx;
 }

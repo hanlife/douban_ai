@@ -10,10 +10,11 @@ Page({
    * 页面的初始数据
    */
   data: {
+    images: '',
     title: "", //电影名
-    author_name: '', //导演名字
-    casts_name:'',//演员表
-    author:[],
+    directors: [],
+    directors_name: '', //导演名字
+    casts_name: '', //演员表
     average: '', //评分
     year: '', //年份
     collect_count: '', //看过
@@ -23,44 +24,57 @@ Page({
     casts: [], //导演/演员
     genres: [], //标签
   },
+  toActor:function(e){
+    let id = e.currentTarget.dataset.id
+    wx.navigateTo({
+      url: '/pages/douban/actor/index?id=' + id
+    })
+  },
   // 格式数据
   formData(data) {
     let {
+      images,
       title,
-      author,
+      directors, //导演集合
+      casts,
       rating,
       wish_count,
       year,
       collect_count,
       ratings_count,
       summary,
-      attrs,
-      genres
+      genres,
     } = data
-    let name = author.map(v=>{
+    let casts_name = casts.map(v => {
       return v.name
-    })
-    console.log(attrs)
-    let casts_name = attrs.cast.join('/')
+    }).join('/')
+    let directors_name = directors.map(v => {
+      return v.name
+    }).join('/')
     this.setData({
+      images: images.small,
       title,
-      author_name:name.join("/"),
+      directors,
+      directors_name: directors_name,
       casts_name: casts_name,
       average: rating.average,
       wish_count,
-      author,
+      casts,
       year,
       collect_count,
       ratings_count,
       summary,
       genres
     })
+    wx.setNavigationBarTitle({
+      title: title
+    })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    let id = options.id || '26416062'
+    let id = options.id || '1292052'
     subject({
       id
     }).then(res => {

@@ -1,2 +1,20 @@
 <!--pages/douban/lists/index.wxml-->
-<text>pages/douban/lists/index.wxml</text>
+
+<view class='in_list'>
+    <view class='in_item' wx:for="{{list}}" wx:key="{{item.index}}">
+      <view class='in_item_img' bindtap="godetail" data-id="{{item.id}}">
+        <image src="{{item.img}}"></image>
+        <text class='in_item_average'>{{item.average==0?"暂无评":item.average}}分 <text style='display:inline-block;width:10rpx;'></text></text>
+      </view>
+      <view class='in_item_des'>
+        <view class='in_item_tit'>{{item.title}}</view>
+        <view class='in_list_type'>
+          <block wx:for="{{item.genres}}" wx:for-index="idx" wx:for-item="itemName" wx:key="{{itemName}}">
+            <text>{{itemName}}</text>
+          </block>
+        </view>
+      </view>
+    </view>
+    <view class='load_more'>{{list.length
+      < totle? "加载更多...": "已加载全部"}} </view>
+    </view>

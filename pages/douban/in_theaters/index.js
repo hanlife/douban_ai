@@ -25,6 +25,7 @@ Page({
       obj.title = item.title
       obj.average = item.rating.average
       obj.id = item.id
+      obj.genres = item.genres
       return obj
     })
     return list

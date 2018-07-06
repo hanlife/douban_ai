@@ -1,39 +1,16 @@
 {
   "pages": [
-    "pages/douban/subject/index",
+    
     "pages/douban/in_theaters/index",
-    "pages/index/index",
-    "pages/douban/top250/index",
-    "pages/life/index",
+    "pages/douban/actor/index",
     "pages/douban/search/index",
-    "pages/douban/lists/index"
+    "pages/douban/lists/index",
+    "pages/douban/subject/index",
+    "pages/index/index",
+    "pages/life/index",
+    "pages/douban/top250/index"
   ],
-  "tabBar": {
-    "color": "#666",
-    "selectedColor": "#E87019",
-    "backgroundColor": "white",
-    "borderStyle": "black",
-    "list": [
-      {
-        "pagePath": "pages/douban/in_theaters/index",
-        "text": "豆瓣电影",
-        "iconPath": "./image/douban.png",
-        "selectedIconPath": "./image/douban-s.png"
-      },
-      {
-        "pagePath": "pages/index/index",
-        "text": "AI",
-        "iconPath": "./image/ai.png",
-        "selectedIconPath": "./image/ai-s.png"
-      },
-      {
-        "pagePath": "pages/life/index",
-        "text": "我的",
-        "iconPath": "./image/life.png",
-        "selectedIconPath": "./image/life-s.png"
-      }
-    ]
-  },
+  
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",

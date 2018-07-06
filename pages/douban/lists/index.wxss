@@ -1,1 +1,7 @@
 /* pages/douban/lists/index.wxss */
+page{
+  background-color: #f8f8f8;
+}
+.in_list{
+  padding-top:15rpx;
+}

@@ -1,1 +1,68 @@
 /* pages/douban/search/index.wxss */
+
+.search {
+  margin: 20rpx;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  border: 1rpx solid #ccc;
+  position: relative;
+  border-radius: 10rpx;
+}
+
+.search_input {
+  flex: 1;
+  line-height: 60rpx;
+  height: 60rpx;
+  font-size: 32rpx;
+  padding-left: 15rpx;
+}
+
+.search_btn {
+  display: inline-block;
+  width: 100rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 32rpx;
+  color: #333;
+  text-align: center;
+}
+
+.search_btn:first-child {
+  border-right: 1rpx solid #ccc;
+}
+
+.search_btn:last-child {
+  border-left: 1rpx solid #ccc;
+}
+
+.clear {
+  position: absolute;
+  right: 120rpx;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 99;
+}
+
+.hot_search {
+  margin-top: 50rpx;
+  padding: 40rpx 20rpx;
+  border-top: 1rpx solid #ccc;
+}
+
+.hot_search .sub_des_title {
+  font-size: 32rpx;
+  font-weight: 200;
+  line-height: 48rpx;
+}
+
+.hot_search .sub_des_con {
+  font-size: 24rpx;
+  margin: 25rpx 0 60rpx 25rpx;
+  overflow: hidden;
+}
+
+.hot_search .sub_des_con>text {
+  float: left;
+  margin: 15rpx 15rpx 15rpx 0;
+}
