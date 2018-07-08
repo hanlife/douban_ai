@@ -1,30 +1,74 @@
 <!--pages/life/index.wxml-->
 <view class='home'>
   <view class='home_header'>
-    <view class='home_bg'></view>
-    <view class='home_content'>
-      <view class='home_title'>谁也替代不了你的好</view>
-      <view class='home_title_us'>HANLAIFU</view>
+    <view class='home_bg'>
+      <image src='./img/home_bg.png'></image>
     </view>
-     <view class='home_logo'>
+
+    <view class='home_logo'>
       <view>
-      <image src='./logo.jpg' mode='widthFix'></image>
-      </view>
-     </view>
-  </view>
-    <view class='home_warper'>
-      <view class='home_lists'>
-        <view class='home_list_item'>wechat</view>
-        <view class='home_list_item'>github</view>
-        <view class='home_list_item'>weibo</view>
-        <view class='home_list_item'>works</view>
-      </view>
-      <view class='home_job'>
-        <view class='home_job_item'>wechat</view>
-        <view class='home_job_item'>wechat</view>
-      </view>
-      <view class='home_label'>
-        <view class='home_label_item'></view>
+        <image src='./logo.jpg' mode='widthFix'></image>
       </view>
     </view>
+  </view>
+  <view class='home_warper'>
+    <view class='home_lists'>
+      <view class='home_list_item'>
+        <view class='home_list_img wechat_bg'>
+          <image src='./img/wechat.png'></image>
+        </view>
+        <view>wechat</view>
+      </view>
+      <view class='home_list_item'>
+        <view class='home_list_img github_bg'>
+          <image src='./img/github.png'></image>
+        </view>
+        <view>github</view>
+      </view>
+      <view class='home_list_item'>
+        <view class='home_list_img weibo_bg'>
+          <image src='./img/weibo.png'></image>
+        </view>
+        <view>weibo</view>
+      </view>
+      <view class='home_list_item'>
+        <view class='home_list_img prouduction_bg'>
+          <image src='./img/production.png'></image>
+        </view>
+        <view>works</view>
+      </view>
+    </view>
+    <view class='home_job'>
+      <view class='home_job_item'>
+        <view class='home_job_img'>
+          <image src='./img/instroduce.png'></image>
+        </view>
+        <view class='home_job_title'>我的简介</view>
+      </view>
+      <view class='home_job_item'>
+        <view class='home_job_img'>
+          <image src='./img/label.png'></image>
+        </view>
+        <view class='home_job_title'>我的标签</view>
+      </view>
+      <view class='home_job_item'>
+        <view class='home_job_img'>
+          <image src='./img/message.png'></image>
+        </view>
+        <view class='home_job_title'>给我留言</view>
+      </view>
+    </view>
+    <view class='home_label'>
+      <view class='home_label_item'></view>
+    </view>
+  </view>
+</view>
+
+<view class='tip_box'>
+  <view class='tip_bg'></view>
+  <view class='tip_con'>
+    <view class='tip_title'>微信号</view>
+    <view class='tip_des'>13760315374</view>
+    <view class='tip_button'>点击复制到剪切板</view>
+  </view>
 </view>

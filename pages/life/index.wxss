@@ -1,5 +1,9 @@
 /* pages/life/index.wxss */
 
+page {
+  background-color: #fff;
+}
+
 .home {
 }
 
@@ -20,6 +24,11 @@
   z-index: -1;
 }
 
+.home_bg>image {
+  width: 100%;
+  height: 100%;
+}
+
 .home_content {
   text-align: center;
 }
@@ -31,7 +40,7 @@
   transform: translateX(-50%);
   width: 240rpx;
   height: 240rpx;
-  background-color: #333;
+  background-color: #fff;
   z-index: 10;
   border-radius: 50%;
 }
@@ -42,13 +51,13 @@
 
 .home_logo>view {
   font-size: 0;
-  margin: 20rpx;
+  margin: 10rpx;
   border-radius: 50%;
   overflow: hidden;
 }
 
 .home_warper {
-  background-color: #333;
+  background-color: #fff;
 }
 
 .home_title {
@@ -62,6 +71,142 @@
   line-height: 48rpx;
 }
 
-.home_lists{
-  padding-top: 150rpx;
+.home_lists {
+  padding-top: 130rpx;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  color: #666;
+  font-size: 24rpx;
+  margin: 0 25rpx 50rpx;
 }
+
+.home_list_item {
+  flex: 1;
+  height: 150rpx;
+  text-align: center;
+}
+
+.home_list_img {
+  width: 60rpx;
+  height: 60rpx;
+  margin: 0 auto 5rpx;
+  padding: 20rpx;
+  font-size: 0;
+  border-radius: 25rpx;
+}
+
+.wechat_bg {
+  background-color: #08c217;
+}
+
+.github_bg {
+  background-color: #2899d9;
+}
+
+.weibo_bg {
+  background-color: #17d3b0;
+}
+
+.prouduction_bg {
+  background-color: #f65b1e;
+}
+
+.home_list_img>image {
+  width: 100%;
+  height: 100%;
+}
+
+.home_job {
+  margin: 0 20rpx;
+}
+
+.home_job_item {
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 32rpx;
+  border-bottom: 1rpx solid #ccc;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  margin-bottom: 10rpx;
+}
+
+.home_job_img {
+  height: 50rpx;
+  width: 50rpx;
+  padding: 10rpx;
+  font-size: 0;
+  text-align: center;
+  line-height: 50rpx;
+  border-radius: 10rpx;
+}
+
+.home_job_img>image {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.home_job_title {
+  flex: 1;
+  margin-left: 20rpx;
+}
+
+.tip_box {
+}
+
+.tip_bg {
+  position: fixed;
+  z-index: 998;
+  background-color: rgba(0, 0, 0, 0.7);
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.tip_con {
+  background-color: #fff;
+  position: fixed;
+  z-index: 999;
+  width: 500rpx;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20rpx;
+  box-shadow: 0rpx 0rpx 10rpx #000;
+}
+
+.tip_title {
+  font-size: 32rpx;
+  color: #333;
+  line-height: 58rpx;
+  padding-left: 20rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+
+.tip_des {
+  padding: 40rpx 20rpx;
+  color: #666;
+  font-size: 28rpx;
+}
+
+.tip_button {
+  text-align: center;
+  font-size: 30rpx;
+  color: #333;
+  line-height: 88rpx;
+  border-top: 1rpx solid #ccc;
+}
+
+/*
+#08C217
+#2899D9
+#17D3B0
+#F65B1E
+#D4A6E7
+#99DCFA
+#A0D352
+#F7B63B
+*/
