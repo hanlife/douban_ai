@@ -4,7 +4,6 @@
     <view class='home_bg'>
       <image src='./img/home_bg.png'></image>
     </view>
-
     <view class='home_logo'>
       <view>
         <image src='./logo.jpg' mode='widthFix'></image>
@@ -13,30 +12,14 @@
   </view>
   <view class='home_warper'>
     <view class='home_lists'>
-      <view class='home_list_item'>
-        <view class='home_list_img wechat_bg'>
-          <image src='./img/wechat.png'></image>
+      <block wx:for="{{list}}" wx:key="{{item.index}}">
+        <view class='home_list_item' bindtap='showTip' data-id='{{item.id}}'>
+          <view class='home_list_img {{item.id+"_bg"}}'>
+            <image src='{{item.img}}'></image>
+          </view>
+          <view>{{item.id}}</view>
         </view>
-        <view>wechat</view>
-      </view>
-      <view class='home_list_item'>
-        <view class='home_list_img github_bg'>
-          <image src='./img/github.png'></image>
-        </view>
-        <view>github</view>
-      </view>
-      <view class='home_list_item'>
-        <view class='home_list_img weibo_bg'>
-          <image src='./img/weibo.png'></image>
-        </view>
-        <view>weibo</view>
-      </view>
-      <view class='home_list_item'>
-        <view class='home_list_img prouduction_bg'>
-          <image src='./img/production.png'></image>
-        </view>
-        <view>works</view>
-      </view>
+      </block>
     </view>
     <view class='home_job'>
       <view class='home_job_item'>
@@ -49,14 +32,14 @@
         <view class='home_job_img'>
           <image src='./img/label.png'></image>
         </view>
-        <view class='home_job_title'>我的标签</view>
+        <view class='home_job_title' bindtap='toLable'>我的标签</view>
       </view>
-      <view class='home_job_item'>
+      <!-- <view class='home_job_item'>
         <view class='home_job_img'>
           <image src='./img/message.png'></image>
         </view>
         <view class='home_job_title'>给我留言</view>
-      </view>
+      </view> -->
     </view>
     <view class='home_label'>
       <view class='home_label_item'></view>
@@ -64,11 +47,18 @@
   </view>
 </view>
 
-<view class='tip_box'>
-  <view class='tip_bg'></view>
+<view class='contact'>
+  <view class='contact_img'>
+    <image src='./img/contact.png'></image>
+    <button open-type="contact"></button>
+  </view>
+</view>
+
+<view class='tip_box' wx:if="{{show}}">
+  <view class='tip_bg' bindtap='hide'></view>
   <view class='tip_con'>
-    <view class='tip_title'>微信号</view>
-    <view class='tip_des'>13760315374</view>
-    <view class='tip_button'>点击复制到剪切板</view>
+    <view class='tip_title'>{{showMessge.id}}</view>
+    <view class='tip_des'>{{showMessge.text}}</view>
+    <view class='tip_button' bindtap='copy' data-val="{{showMessge.value}}">点击复制到剪切板</view>
   </view>
 </view>

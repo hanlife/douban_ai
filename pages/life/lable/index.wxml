@@ -1,0 +1,8 @@
+<!--pages/life/lable/index.wxml-->
+<view class='lable'>
+  <view class='lable_list'>
+    <block wx:for="{{list}}" wx:key="{{item.index}}">
+      <view class='lable_list_item' style='background-color:{{item.bg_color}};'>{{item.value}}</view>
+    </block>
+  </view>
+</view>

@@ -1,5 +1,6 @@
 {
   "pages": [
+   
     "pages/life/index",
     "pages/douban/in_theaters/index",
     "pages/douban/actor/index",
@@ -9,12 +10,14 @@
     "pages/index/index",
     "pages/douban/top250/index",
     "pages/life/introduce/index",
+    "pages/life/lable/index",
     "pages/life/analysis/index"
+    
   ],
   "tabBar": {
     "color": "#666",
     "selectedColor": "#E87019",
-    "backgroundColor": "white",
+    "backgroundColor": "#ffffff",
     "borderStyle": "black",
     "list": [
       {
