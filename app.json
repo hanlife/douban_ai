@@ -1,6 +1,6 @@
 {
   "pages": [
-   
+    "pages/echart/statistical/index",
     "pages/life/index",
     "pages/douban/in_theaters/index",
     "pages/douban/actor/index",
