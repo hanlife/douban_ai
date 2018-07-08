@@ -18,7 +18,7 @@
         </view>
       </view>
     </view>
-    <view class='load_more'>{{list.length
+    <view class='load_more' wx:if="{{list.length>0}}">{{list.length
       < totle? "加载更多...": "已加载全部"}} </view>
     </view>
   </view>

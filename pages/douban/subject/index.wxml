@@ -2,7 +2,7 @@
 <view class='subject'>
   <view class='sub_header'>
     <view class='sub_img'>
-      <image src='{{images}}' mode='aspectFit'></image>
+      <image src='{{images}}' mode='widthFix'></image>
     </view>
     <view class='sub_info'>
       <view class='sub_info_item sub_title'>{{title}}</view>

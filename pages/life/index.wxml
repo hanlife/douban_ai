@@ -1,2 +1,30 @@
 <!--pages/life/index.wxml-->
-<text>pages/life/index.wxml</text>
+<view class='home'>
+  <view class='home_header'>
+    <view class='home_bg'></view>
+    <view class='home_content'>
+      <view class='home_title'>谁也替代不了你的好</view>
+      <view class='home_title_us'>HANLAIFU</view>
+    </view>
+     <view class='home_logo'>
+      <view>
+      <image src='./logo.jpg' mode='widthFix'></image>
+      </view>
+     </view>
+  </view>
+    <view class='home_warper'>
+      <view class='home_lists'>
+        <view class='home_list_item'>wechat</view>
+        <view class='home_list_item'>github</view>
+        <view class='home_list_item'>weibo</view>
+        <view class='home_list_item'>works</view>
+      </view>
+      <view class='home_job'>
+        <view class='home_job_item'>wechat</view>
+        <view class='home_job_item'>wechat</view>
+      </view>
+      <view class='home_label'>
+        <view class='home_label_item'></view>
+      </view>
+    </view>
+</view>

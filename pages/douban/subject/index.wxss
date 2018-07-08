@@ -16,10 +16,11 @@
   flex: 1;
   font-size: 0;
   text-align: center;
+  padding: 0 20rpx  5rpx;
 }
 
 .sub_img>image{
-  width: 300rpx;
+  width: 100%;
 }
 
 .sub_info{
@@ -31,6 +32,8 @@
 }
 .sub_info_item{
   margin-bottom: 15rpx;
+  max-height: 300rpx;
+  overflow: hidden;
 }
 
 .sub_tab{
