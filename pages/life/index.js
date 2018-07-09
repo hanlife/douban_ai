@@ -129,6 +129,9 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function() {
-
+    return {
+      title: '前端个人小程序，请多多指教！',
+      path: '/pages/life/index'
+    }
   }
 })

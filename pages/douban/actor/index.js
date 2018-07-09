@@ -18,7 +18,7 @@ Page({
   },
   godetail(e){
     let id = e.currentTarget.dataset.id
-    wx.navigateTo({
+    wx.redirectTo({
       url: '/pages/douban/subject/index?id=' + id
     })
   },

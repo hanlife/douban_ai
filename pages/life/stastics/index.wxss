@@ -14,14 +14,8 @@
   margin: 15rpx 0;
 }
 
-.visit_total {
-  font-size: 68rpx;
-  color: red;
-  text-align: center;
-}
-
 .sta_table {
-  margin: 0 15rpx;
+  margin: 0 20rpx;
 }
 
 .sta_tr {
@@ -48,7 +42,37 @@
 }
 
 .section_data {
-  margin: 30rpx 15rpx;
+  margin: 70rpx 20rpx 40rpx;
+  font-size: 30rpx;
+}
+
+.picker_box {
+  display: flex;
+  flex-direction: row;
+}
+
+.date_icon {
+  width: 68rpx;
+  height: 68rpx;
+  font-size: 0;
+}
+.picker_txt{
+  line-height: 68rpx;
+  margin-left: 20rpx;
+}
+
+.date_icon>image {
+  width: 100%;
+  height: 100%;
+}
+
+.visit_total {
+  font-size: 68rpx;
+  text-align: center;
+}
+
+.rect>text {
+  color: #fff;
 }
 
 .rect {
@@ -56,9 +80,10 @@
   height: 200rpx;
   line-height: 200rpx;
   border-radius: 50%;
-  background-color: pink;
+  background-color: #99dcfa;
   position: relative;
   margin: 0 auto;
+  color: #17d3b0;
 }
 
 .rect::before, .rect::after {

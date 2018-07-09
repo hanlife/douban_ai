@@ -2,30 +2,41 @@
 <view class='stastics'>
   <view class='visit'>
     <view class='visit_total_title'>累计用户数</view>
-    <view class='visit_total'><view class='rect'>{{visit_total}}</view></view>
+    <view class='visit_total'>
+      <view class='rect'>
+        <text>{{visit_total}}</text>
+      </view>
+    </view>
   </view>
   <view class="section_data">
     <picker mode="date" value="{{date}}" start="2018-07-07" end="2018-07-09" bindchange="bindDateChange">
-      <view class="picker">
-        统计日期: {{date}}
+      <view class='picker_box'>
+        <view class='date_icon'>
+          <image src='../img/date.png'></image>
+        </view>
+        <view class="picker_txt">
+          统计日期: {{date}}
+        </view>
       </view>
     </picker>
   </view>
   <view class='sta_table'>
     <view class='sta_tr sta_th'>
-      <view class='sta_td'></view>
+      <view class='sta_td'>统计日期</view>
       <view class='sta_td'>打开次数</view>
       <view class='sta_td'>访问次数</view>
       <view class='sta_td'>新用户数</view>
     </view>
+    <block wx:for="{{day}}" wx:key="{{item.index}}">
+      <view class='sta_tr'>
+        <view class='sta_td'>{{item.ref_date}}</view>
+        <view class='sta_td'>{{item.session_cnt}}</view>
+        <view class='sta_td'>{{item.visit_pv}}</view>
+        <view class='sta_td'>{{item.visit_uv_new}}</view>
+      </view>
+    </block>
     <view class='sta_tr'>
-      <view class='sta_td'>日趋势</view>
-      <view class='sta_td'>{{day.session_cnt}}</view>
-      <view class='sta_td'>{{day.visit_pv}}</view>
-      <view class='sta_td'>{{day.visit_uv_new}}</view>
-    </view>
-    <view class='sta_tr'>
-      <view class='sta_td'>周趋势</view>
+      <view class='sta_td'>0702-0708</view>
       <view class='sta_td'>{{week.session_cnt}}</view>
       <view class='sta_td'>{{week.visit_pv}}</view>
       <view class='sta_td'>{{week.visit_uv_new}}</view>

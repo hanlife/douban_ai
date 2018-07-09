@@ -26,7 +26,7 @@ Page({
   },
   toActor:function(e){
     let id = e.currentTarget.dataset.id
-    wx.navigateTo({
+    wx.redirectTo({
       url: '/pages/douban/actor/index?id=' + id
     })
   },
