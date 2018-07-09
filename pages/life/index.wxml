@@ -32,14 +32,14 @@
         <view class='home_job_img'>
           <image src='./img/label.png'></image>
         </view>
-        <view class='home_job_title' bindtap='toLable'>我的标签</view>
+        <view class='home_job_title' bindtap='toLable' data-url="/pages/life/lable/index">我的标签</view>
       </view>
-      <!-- <view class='home_job_item'>
+       <view class='home_job_item'>
         <view class='home_job_img'>
-          <image src='./img/message.png'></image>
+          <image src='./img/stastics.png'></image>
         </view>
-        <view class='home_job_title'>给我留言</view>
-      </view> -->
+        <view class='home_job_title' bindtap='toLable' data-url="/pages/life/stastics/index">访客统计</view>
+      </view> 
     </view>
     <view class='home_label'>
       <view class='home_label_item'></view>

@@ -48,7 +48,20 @@ module.exports = {
   celebrity: function(data) {
     return POST('/douban/celebrity', data);
   },
-  search: function (data) {
+  search: function(data) {
     return POST('/douban/search', data);
+  },
+  // 小程序统计
+  summary: function(data) {
+    return POST('/wx/summary', data);
+  },
+  day: function(data) {
+    return POST('/wx/day', data);
+  },
+  week: function(data) {
+    return POST('/wx/week', data);
+  },
+  month: function(data) {
+    return POST('/wx/month', data);
   },
 }

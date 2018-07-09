@@ -5,6 +5,18 @@ import * as echarts from '../../../ec-canvas/echarts';
 
 let chart = null;
 
+var base = +new Date(2018, 7, 7);
+var oneDay = 24 * 3600 * 1000;
+var date = [];
+
+var data = [Math.random() * 300];
+
+for (var i = 1; i < 15; i++) {
+  var now = new Date(base += oneDay);
+  date.push([now.getFullYear(), now.getMonth() + 1, now.getDate()].join('/'));
+  data.push(Math.round((Math.random() - 0.5) * 20 + data[i - 1]));
+}
+
 function initChart(canvas, width, height) {
   chart = echarts.init(canvas, null, {
     width: width,
@@ -13,99 +25,17 @@ function initChart(canvas, width, height) {
   canvas.setChart(chart);
 
   var option = {
-    color: ['#37a2da', '#32c5e9', '#67e0e3'],
-    tooltip: {
-      trigger: 'axis',
-      axisPointer: { // 坐标轴指示器，坐标轴触发有效
-        type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
-      }
-    },
-    legend: {
-      data: ['热度', '正面', '负面']
-    },
-    grid: {
-      left: 20,
-      right: 20,
-      bottom: 15,
-      top: 40,
-      containLabel: true
-    },
-    xAxis: [{
-      type: 'value',
-      axisLine: {
-        lineStyle: {
-          color: '#999'
-        }
-      },
-      axisLabel: {
-        color: '#666'
-      }
-    }],
-    yAxis: [{
+    xAxis: {
       type: 'category',
-      axisTick: {
-        show: false
-      },
-      data: ['汽车之家', '今日头条', '百度贴吧', '一点资讯', '微信', '微博', '知乎'],
-      axisLine: {
-        lineStyle: {
-          color: '#999'
-        }
-      },
-      axisLabel: {
-        color: '#666'
-      }
-    }],
+      data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+    },
+    yAxis: {
+      type: 'value'
+    },
     series: [{
-        name: '热度',
-        type: 'bar',
-        label: {
-          normal: {
-            show: true,
-            position: 'inside'
-          }
-        },
-        data: [300, 270, 340, 344, 300, 320, 310],
-        itemStyle: {
-          // emphasis: {
-          //   color: '#37a2da'
-          // }
-        }
-      },
-      {
-        name: '正面',
-        type: 'bar',
-        stack: '总量',
-        label: {
-          normal: {
-            show: true
-          }
-        },
-        data: [120, 102, 141, 174, 190, 250, 220],
-        itemStyle: {
-          // emphasis: {
-          //   color: '#32c5e9'
-          // }
-        }
-      },
-      {
-        name: '负面',
-        type: 'bar',
-        stack: '总量',
-        label: {
-          normal: {
-            show: true,
-            position: 'left'
-          }
-        },
-        data: [-20, -32, -21, -34, -90, -130, -110],
-        itemStyle: {
-          // emphasis: {
-          //   color: '#67e0e3'
-          // }
-        }
-      }
-    ]
+      data: [120, 200, 150, 80, 70, 110, 130],
+      type: 'bar'
+    }]
   };
 
   chart.setOption(option);
@@ -135,7 +65,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function() {
-    setTimeout(function () {
+    setTimeout(function() {
       // 获取 chart 实例的方式
       console.log(chart)
     }, 2000);

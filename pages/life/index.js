@@ -29,9 +29,10 @@ Page({
     show: false,
     showMessge: {}
   },
-  toLable(){
+  toLable(e) {
+    let url = e.currentTarget.dataset.url;
     wx.navigateTo({
-      url: '/pages/life/lable/index',
+      url: url,
     })
   },
   showTip(e) {
