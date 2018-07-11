@@ -14,6 +14,7 @@ Page({
     visit_total: '',
     day: [],
     week: {},
+    endDate:'2018-07-11'
   },
   bindDateChange: function (e) {
     let that = this,
@@ -40,7 +41,7 @@ Page({
   getNowFormatDate() {
     var curDate = new Date();
     var date = new Date(curDate.getTime() - 24 * 60 * 60 * 1000);
-    var seperator1 = "";
+    var seperator1 = "-";
     var year = date.getFullYear();
     var month = date.getMonth() + 1;
     var strDate = date.getDate();
@@ -58,7 +59,7 @@ Page({
    */
   onLoad: function (options) {
     let that = this;
-    let preDate = that.getNowFormatDate();
+    let preDate = that.getNowFormatDate().replace(/-/g, "");
     // 累计用户数
     summary({
       begin_date: preDate,
@@ -103,7 +104,10 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    let end = this.getNowFormatDate()
+    this.setData({
+      endDate:end
+    })
   },
 
   /**

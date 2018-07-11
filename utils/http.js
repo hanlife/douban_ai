@@ -64,4 +64,10 @@ module.exports = {
   month: function(data) {
     return POST('/wx/month', data);
   },
+  userInfo: function(data) {
+    return POST('/wx/userInfo', data);
+  },
+  getOpenid: function(data) {
+    return POST('/wx/getOpenid', data);
+  },
 }

@@ -132,6 +132,22 @@ page {
   margin-bottom: 10rpx;
 }
 
+.user_btn {
+  display: inline;
+  background-color: transparent;
+  border: 0;
+  font-size: 32rpx;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  line-height: 70rpx;
+}
+
+.user_btn::before, .user_btn::after {
+  content: "";
+  border: 0;
+}
+
 .home_job_img {
   height: 50rpx;
   width: 50rpx;

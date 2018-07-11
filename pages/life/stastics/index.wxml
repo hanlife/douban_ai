@@ -1,7 +1,7 @@
 <!--pages/life/stastics/index.wxml-->
 <view class='stastics'>
   <view class='visit'>
-    <view class='visit_total_title'>累计用户数</view>
+    <view class='visit_total_title'>昨日新用户数</view>
     <view class='visit_total'>
       <view class='rect'>
         <text>{{visit_total}}</text>
@@ -9,7 +9,7 @@
     </view>
   </view>
   <view class="section_data">
-    <picker mode="date" value="{{date}}" start="2018-07-07" end="2018-07-09" bindchange="bindDateChange">
+    <picker mode="date" value="{{date}}" start="2018-07-07" end="{{endDate}}" bindchange="bindDateChange">
       <view class='picker_box'>
         <view class='date_icon'>
           <image src='../img/date.png'></image>

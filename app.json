@@ -10,8 +10,7 @@
     "pages/douban/top250/index",
     "pages/life/introduce/index",
     "pages/life/lable/index",
-    "pages/life/stastics/index",
-    "pages/echart/statistical/index"
+    "pages/life/stastics/index"
     
   ],
   "tabBar": {
