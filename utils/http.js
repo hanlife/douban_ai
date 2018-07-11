@@ -67,6 +67,12 @@ module.exports = {
   userInfo: function(data) {
     return POST('/wx/userInfo', data);
   },
+  getmessage: function (data) {
+    return POST('/wx/getmessage', data);
+  },
+  writemessage: function (data) {
+    return POST('/wx/writemessage', data);
+  },
   getOpenid: function(data) {
     return POST('/wx/getOpenid', data);
   },

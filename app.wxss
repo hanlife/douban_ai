@@ -147,3 +147,20 @@ image {
   border: 1rpx solid #ccc;
   border-radius: 10rpx;
 }
+/*获取用户权限  */
+.user_btn {
+  display: block;
+  background-color: transparent;
+  border: 0;
+  font-size: 32rpx;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  line-height: 70rpx;
+  text-align: left;
+}
+
+.user_btn::before, .user_btn::after {
+  content: "";
+  border: 0;
+}

@@ -35,16 +35,7 @@ Page({
     show: false,
     showMessge: {}
   },
-  onGotUserInfo(e) {
-    let data = e.detail.userInfo
-    let OPENID = app.globalData.openid
-    if (data != null) {
-      data.openid = OPENID
-      userInfo(data).then(res => {
-        console.log(res)
-      })
-    }
-  },
+  
   toLable(e) {
     let url = e.currentTarget.dataset.url;
     wx.navigateTo({

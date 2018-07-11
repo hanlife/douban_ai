@@ -1,6 +1,8 @@
 {
   "pages": [
+    "pages/life/message/index",
     "pages/life/index",
+    
     "pages/douban/in_theaters/index",
     "pages/douban/actor/index",
     "pages/douban/subject/index",
@@ -11,7 +13,6 @@
     "pages/life/introduce/index",
     "pages/life/lable/index",
     "pages/life/stastics/index"
-    
   ],
   "tabBar": {
     "color": "#666",
