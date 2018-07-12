@@ -1,0 +1,28 @@
+/* pages/component/gohome.wxml.wxss */
+
+
+.gohome {
+  position: fixed;
+  z-index: 97;
+  right: 50rpx;
+  bottom: 50rpx;
+}
+
+.nav_box {
+  width: 85rpx;
+  height: 85rpx;
+  padding: 15rpx;
+  background-color: #99dcfa;
+  border-radius: 50%;
+  border: 1rpx solid #ccc;
+  box-shadow: 0 0 10rpx rgba(0, 0, 0, 0.8);
+}
+navigator>image {
+  width: 100%;
+  height: 100%;
+}
+
+.nav_box>navigator {
+  width: 85rpx;
+  height: 85rpx;
+}

@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/tencentAi/bankcard/index",
     "pages/life/index",
     "pages/life/message/index",
     "pages/douban/in_theaters/index",
@@ -12,6 +13,7 @@
     "pages/life/introduce/index",
     "pages/life/lable/index",
     "pages/life/stastics/index"
+    
   ],
   "tabBar": {
     "color": "#666",
@@ -24,6 +26,12 @@
         "text": "豆瓣电影",
         "iconPath": "./image/douban.png",
         "selectedIconPath": "./image/douban-s.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "AI",
+        "iconPath": "./image/ai.png",
+        "selectedIconPath": "./image/ai-s.png"
       },
       {
         "pagePath": "pages/life/index",

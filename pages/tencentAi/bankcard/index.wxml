@@ -1,0 +1,27 @@
+<!--pages/canvas/index.wxml-->
+
+<import src="../../component/gohome.wxml" />
+<template is="NavBar" data="" />
+
+<!--wxml部分-->
+<view class="">
+  <view class="canvasStyle">
+    <canvas canvas-id="myCanvas" bindtouchstart="start" bindtouchmove="move" />
+    <view class="Canvas_Text">
+      <image src="{{imageUrl}}"></image>
+    </view>
+  </view>
+  <view class="chooseImage">
+    <!-- <view class="Btn BtnImg_select" bindtap="chooseImageFun">先选择图片</view> -->
+    <view class='input_tit'>请输入你的名字:</view>
+    <view class="Input_text">
+      <input placeholder="请输入装逼内容" value='{{sytext}}' bindinput="InputFuns" bindblur="bindDraw" bindconfirm="bindDraw" />
+    </view>
+    <view class="Btn generateBtn">
+      <button type="primary" bindtap="Okgenerate"> 点击生成，并保存到手机相册 </button>
+      <view>(当你点击生成的那一刻，恭喜你装逼生涯就此开始了)</view>
+    </view>
+  </view>
+</view>
+
+

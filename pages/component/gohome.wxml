@@ -1,0 +1,10 @@
+<!--pages/component/gohome.wxml.wxml-->
+<template name="NavBar">
+  <view class='gohome'>
+    <view class='nav_box'>
+      <navigator url="/pages/index/index" open-type="switchTab">
+        <image src='../../../image/more.png'></image>
+      </navigator>
+    </view>
+  </view>
+</template>

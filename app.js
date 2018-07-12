@@ -32,9 +32,3 @@ App({
 
 })
 
-// {
-//   "pagePath": "pages/index/index",
-//   "text": "AI",
-//   "iconPath": "./image/ai.png",
-//   "selectedIconPath": "./image/ai-s.png"
-// },
