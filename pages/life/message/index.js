@@ -5,6 +5,8 @@ const {
 } = require("../../../utils/http.js");
 const app = getApp()
 
+const SIZE = 5
+
 Page({
 
   /**
@@ -16,9 +18,10 @@ Page({
     show: false,
     list: [],
     currentPage: 1,
-    pageSize: 2,
+    pageSize: SIZE,
     count: '',
     total: '',
+    userInfo: {},
   },
   // 获取用户权限
   onGotUserInfo(e) {
@@ -29,6 +32,7 @@ Page({
       data.openid = OPENID
       userInfo(data).then(res => {
         that.setData({
+          userInfo: data,
           show: true,
           focus: true
         })
@@ -41,10 +45,34 @@ Page({
       value
     })
   },
-  bindconfirm() {
-    let value = e.detail.value
-    let openid = app.globalData.openid
+  bindconfirm(e) {
+    let that = this;
+    let value = this.data.value
+    let {
+      avatarUrl,
+      nickName,
+      openid
+    } = this.data.userInfo
     this.close()
+    writemessage({
+      avatarUrl,
+      nickName,
+      openid,
+      value
+    }).then(res => {
+      if (res.code == 0){
+        wx.showToast({
+          icon:'success',
+          title: res.data,
+        })
+        that.onPullDownRefresh()
+      }else{
+        wx.showToast({
+          icon: 'none',
+          title: res.data,
+        })
+      }
+    })
   },
   write() {
     this.setData({
@@ -118,7 +146,7 @@ Page({
     let that = this
     getmessage({
       currentPage: 1,
-      pageSize: 2
+      pageSize: SIZE
     }).then(res => {
       if (res.code == 0) {
         that.setData({
@@ -128,6 +156,7 @@ Page({
           count: res.data.count,
           total: res.data.total
         })
+        wx.stopPullDownRefresh()
       }
     })
   },
@@ -138,6 +167,7 @@ Page({
   onReachBottom: function() {
     let that = this
     let {
+      list,
       currentPage,
       pageSize,
       total
@@ -158,7 +188,7 @@ Page({
         that.setData({
           currentPage: res.data.page,
           pageSize: res.data.num,
-          list: res.data.data,
+          list: list.concat(res.data.data),
           count: res.data.count,
           total: res.data.total
         })

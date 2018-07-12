@@ -3,9 +3,9 @@
 App({
   globalData: {
     userInfo: null,
-    // rootUrl:"http://www.f2ehan.com",
+    rootUrl:"https://www.f2ehan.com",
     // rootUrl:'http://192.168.5.52:3000',
-    rootUrl: 'http://localhost:3000',
+    // rootUrl: 'http://localhost:3000',
     openid: '',
     session_key: '',
   },

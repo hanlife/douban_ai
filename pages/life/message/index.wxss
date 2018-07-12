@@ -1,7 +1,9 @@
 /* pages/life/message/index.wxss */
-page{
+
+page {
   background-color: #f8f8f8;
 }
+
 .message {
   margin: 0 15rpx;
   padding-top: 20rpx;
@@ -26,6 +28,8 @@ page{
   width: 50rpx;
   height: 50rpx;
   font-size: 0;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .item_ava>image {
@@ -55,7 +59,7 @@ page{
   margin-right: 20rpx;
 }
 
-.foot_btn{
+.foot_btn {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -64,20 +68,21 @@ page{
   line-height: 88rpx;
   text-align: center;
   font-size: 32rpx;
-  background-color: #A0D352;
+  background-color: #a0d352;
   color: #fff;
 }
 
-.write_shadow{
+.write_shadow {
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   z-index: 98;
-  background-color: rgba(0, 0, 0, .7);
+  background-color: rgba(0, 0, 0, 0.7);
 }
-.write_warper{
+
+.write_warper {
   position: fixed;
   width: 480rpx;
   min-height: 200rpx;
@@ -88,15 +93,24 @@ page{
   z-index: 99;
   top: 25%;
   left: 50%;
-  transform: translate(-50%,-50%);
-}
-.write_input{
-  margin: 10rpx;
-  width: 450rpx;
+  transform: translate(-50%, -50%);
 }
 
-.user_btn{
+.write_input {
+  margin: 10rpx;
+  width: 450rpx;
+  min-height: 150rpx;
+}
+
+.user_btn {
   color: #fff;
   text-align: center;
   line-height: 88rpx;
+}
+
+.write_btn {
+  color: #fff;
+  text-align: center;
+  line-height: 88rpx;
+  background-color: #a0d352;
 }

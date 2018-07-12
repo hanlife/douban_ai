@@ -1,25 +1,14 @@
 <!--pages/life/message/index.wxml-->
 <view class='message'>
   <view class='message_list'>
-    <view class='message_item'>
+    <view class='message_item' wx:for="{{list}}" wx:key="{{item.id}}">
       <view class='item_ava'>
-        <image src='../img/avatarUrl.jpg'></image>
+        <image src='{{item.avatarUrl?item.avatarUrl:"../img/default_img.jpg"}}'></image>
       </view>
       <view class='item_cont'>
-        <view class='item_titel'>韩</view>
-        <view class='item_txt'>这是留这是留言内容这是留这是留言内容这是留言内容这是留言内容这是留言内容这是留言内容言内容这是留这是留言内容这是留言内容这是留言内容这是留言内容这是留言内容言内容这是留这是留言内容这是留言内容这是留言内容这是留言内容这是留言内容言内容这是留言内容这是留言内容这是留言内容这是留言内容言内容</view>
-        <view class='item_time'>2017年7月2日16：11：22</view>
-      </view>
-    </view>
-
-    <view class='message_item'>
-      <view class='item_ava'>
-        <image src='../img/avatarUrl.jpg'></image>
-      </view>
-      <view class='item_cont'>
-        <view class='item_titel'>韩</view>
-        <view class='item_txt'>这是留留这是留言内容内容这是留言内容这是留言内容这是留言内容言内容这是留言内容这是留言内容这是留言内容这是留言内容言内容</view>
-        <view class='item_time'>2017年7月2日16：11：22</view>
+        <view class='item_titel'>{{item.name}}</view>
+        <view class='item_txt'>{{item.content}}</view>
+        <view class='item_time'>{{item.creat_time?item.creat_time:"时间裂缝"}}</view>
       </view>
     </view>
   </view>
@@ -30,7 +19,8 @@
   <view class='write_box' wx:if="{{show}}">
     <view class='write_shadow' bindtap='close'></view>
     <view class='write_warper'>
-      <textarea class='write_input' bindblur="bindTextAreaBlur" bindconfirm="bindconfirm" auto-height auto-focus="{{focus}}" placeholder="请输入留言内容" />
+      <textarea class='write_input' bindblur="bindTextAreaBlur" bindinput="bindTextAreaBlur" bindconfirm="bindconfirm" auto-height auto-focus="{{focus}}" placeholder="请输入留言内容" />
+      <view bindtap='bindconfirm' class='write_btn'>确定</view>
     </view>
   </view>
 </view>

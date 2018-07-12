@@ -1,8 +1,7 @@
 {
   "pages": [
-    "pages/life/message/index",
     "pages/life/index",
-    
+    "pages/life/message/index",
     "pages/douban/in_theaters/index",
     "pages/douban/actor/index",
     "pages/douban/subject/index",
