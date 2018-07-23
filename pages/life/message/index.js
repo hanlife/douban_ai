@@ -5,7 +5,7 @@ const {
 } = require("../../../utils/http.js");
 const app = getApp()
 
-const SIZE = 5
+const SIZE = 8
 
 Page({
 

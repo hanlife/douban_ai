@@ -1,6 +1,6 @@
 {
   "pages": [
-    "pages/tencentAi/bankcard/index",
+    
     "pages/life/index",
     "pages/life/message/index",
     "pages/douban/in_theaters/index",
@@ -12,8 +12,8 @@
     "pages/douban/top250/index",
     "pages/life/introduce/index",
     "pages/life/lable/index",
-    "pages/life/stastics/index"
-    
+    "pages/life/stastics/index",
+    "pages/tencentAi/bankcard/index"
   ],
   "tabBar": {
     "color": "#666",
